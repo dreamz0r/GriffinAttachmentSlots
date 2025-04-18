@@ -56,10 +56,10 @@ class cfgVehicles
 			"WalkieTalkie",
 			"Backpack_1", //Tool
 			"Pistol", 
-			"magazine1",
-			"magazine2",
-			"magazine3",
-			"magazine4",
+			"magazine1", // För att använda 1-4 krävs koden från CfgSlots och CfgMagazines också
+			"magazine2", // För att använda 1-4 krävs koden från CfgSlots och CfgMagazines också
+			"magazine3", // För att använda 1-4 krävs koden från CfgSlots och CfgMagazines också
+			"magazine4", // För att använda 1-4 krävs koden från CfgSlots och CfgMagazines också
 			"VestHolster",
 			"VestPouch",
 			"VestGrenadeA",
