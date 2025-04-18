@@ -10,6 +10,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
+			"DZ_Data",
 			"DZ_Characters"
 		};
 	};
@@ -56,10 +57,10 @@ class cfgVehicles
 			"WalkieTalkie",
 			"Backpack_1", //Tool
 			"Pistol", 
-			"magazine1", // För att använda 1-4 krävs koden från CfgSlots och CfgMagazines också
-			"magazine2", // För att använda 1-4 krävs koden från CfgSlots och CfgMagazines också
-			"magazine3", // För att använda 1-4 krävs koden från CfgSlots och CfgMagazines också
-			"magazine4", // För att använda 1-4 krävs koden från CfgSlots och CfgMagazines också
+			"magazine1", // To use magazine1-4 code from CfgMagazines and CfgSlots is required
+			"magazine2", // To use magazine1-4 code from CfgMagazines and CfgSlots is required
+			"magazine3", // To use magazine1-4 code from CfgMagazines and CfgSlots is required
+			"magazine4", // To use magazine1-4 code from CfgMagazines and CfgSlots is required
 			"VestHolster",
 			"VestPouch",
 			"VestGrenadeA",
@@ -198,10 +199,27 @@ class cfgVehicles
 			};
 		};
 	};
+	
+	//For heating of frozen edibles
+	class Inventory_Base;
+	class Edible_Base;
+	class HeatingFood: Edible_Base
+	{
+		inventorySlot[]+=
+		{
+			"DirectCookingA",
+			"DirectCookingB",
+			"DirectCookingC",
+			"SmokingA",
+			"SmokingB",
+			"SmokingC",
+			"SmokingD"
+		};
+	};
 };
 
-//La till denna delen för att alla magasin som använder Magazine_Base ska kunna sättas in i magazine1-4 slots
-//Borde täcka varenda magasin i hela DayZ om nåt moddat inte använder den basklassen dvs.
+//This is where all magazine class names are defined, slot 1-4
+//Any magazine using Magazine_Base will fit in said slots.
 class CfgMagazines
 {
 	class DefaultMagazine;
@@ -217,7 +235,7 @@ class CfgMagazines
 	};
 };
 
-//Här har jag gjort magazine 1-4 med magazine2's ikon för att kunna ha flera magasin på ett objekt
+//Magazine slot 1-4 defined as separate but as magazine2 to keep more than one magazine in object
 class CfgSlots
 {
 	class Slot_magazine1
@@ -245,7 +263,7 @@ class CfgSlots
 		ghostIcon="magazine2";
 	};
 	
-	//Har inte orkat ta tag i detta än
+	//Coming soon
 	/*class Slot_morphine
 	{
 		name="morphine";
