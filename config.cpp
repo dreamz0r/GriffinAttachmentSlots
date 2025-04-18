@@ -31,17 +31,14 @@ class CfgMods
 		version="1.0";
 		extra=0;
 		type="mod";
-		dependencies[]=
-		{
-			"World"
-		};
+		dependencies[]={};
 	};
 };
 
 class cfgVehicles
 {
-	class Inventory_Base;
-	class Clothing;
+	class Clothing_Base;
+	class Clothing: Clothing_Base{};
 	
 	class GriffBag: Clothing
 	{
